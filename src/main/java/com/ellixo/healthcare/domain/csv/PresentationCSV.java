@@ -26,7 +26,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.ArrayList;
 import java.util.List;
 
-@JsonPropertyOrder({"codeCIS", "codeCIP7", "libelle", "statutAdministratif", "etatCommercialisationAMM", "dateDeclarationCommercialisation", "codeCIP13", "agrementCollectivites", "tauxRemboursement", "prix", "indicationsRemboursement"})
+@JsonPropertyOrder({"codeCIS", "codeCIP7", "libelle", "statutAdministratif", "etatCommercialisationAMM", "dateDeclarationCommercialisation", "codeCIP13", "agrementCollectivites", "tauxRemboursement", "prix", "indicationsRemboursement", "inconnu1", "inconnu2"})
 public class PresentationCSV {
 
     private String codeCIS;
@@ -42,6 +42,8 @@ public class PresentationCSV {
     @JsonDeserialize(using = FloatDeserializer.class)
     private Float prix;
     private String indicationsRemboursement;
+    private String inconnu1;
+    private String inconnu2;
 
     public String getCodeCIS() {
         return codeCIS;
@@ -129,6 +131,22 @@ public class PresentationCSV {
 
     public void setIndicationsRemboursement(String indicationsRemboursement) {
         this.indicationsRemboursement = indicationsRemboursement;
+    }
+
+    public String getInconnu1() {
+        return inconnu1;
+    }
+
+    public void setInconnu1(String inconnu1) {
+        this.inconnu1 = inconnu1;
+    }
+
+    public String getInconnu2() {
+        return inconnu2;
+    }
+
+    public void setInconnu2(String inconnu2) {
+        this.inconnu2 = inconnu2;
     }
 
     @Override
