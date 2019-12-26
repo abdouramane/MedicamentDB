@@ -150,6 +150,7 @@ public class MedicamentService {
         ExecutorService executor = Executors.newFixedThreadPool(2);
         for (int i = 0; i < medicaments.size(); i++) {
             Medicament medicament = medicaments.get(i);
+            LOG.debug("Threating this => " + medicament.getCodeCIS());
 
             executor.submit(new Thread() {
 
