@@ -166,7 +166,7 @@ public class MedicamentService {
                             elements = doc.select("p:gt(" + start.elementSiblingIndex() + "):lt(" + end.elementSiblingIndex() + ")");
 
                             String text = transformScrapedData(medicament.getCodeCIS(), elements);
-                            if (!text.endsWith("</ul>")) {
+                            if (text != null && !text.endsWith("</ul>")) {
                                 text += "<br>";
                             }
 
