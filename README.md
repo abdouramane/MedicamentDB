@@ -49,7 +49,7 @@ GET /api/v1/health
 ```
 
 ##Fiche Technique
-- Spring Boot
-- Angular.js
-- Elasticsearch
+- Spring Boot 1.3.0
+- Angular.js 1.X.X
+- Elasticsearch 1.5.2
 - Amazon EC2
